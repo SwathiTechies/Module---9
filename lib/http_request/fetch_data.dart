@@ -14,7 +14,7 @@ class PostScreen extends StatefulWidget {
 }
 
 class _PostScreenState extends State<PostScreen> {
-  late Future<List<Post>> futurePosts;
+  Future<List<Post>> futurePosts = [] as Future<List<Post>>;
 
   @override
   void initState() {

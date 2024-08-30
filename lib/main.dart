@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
+import 'package:module_9/state_management/count_getx.dart';
 import 'package:module_9/state_management/getx.dart';
 import 'package:module_9/state_management/provider.dart';
+import 'package:module_9/state_management/splash_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'http_request/fetch_data.dart';
@@ -51,11 +53,7 @@ import 'http_request/fetch_data.dart';
 //       }
 //     }
 //
-    class CounterController extends GetxController {
-      var count = 0.obs;
 
-      void increment() => count++;
-    }
 //
 
     // HTTP
@@ -68,7 +66,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PostScreen();
+    return GetMaterialApp(
+       home:  SplashScreen()
+    );
   }
 }
 

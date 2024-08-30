@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 
-import '../main.dart';
 
 class GetApp extends StatefulWidget {
   const GetApp({super.key});
@@ -28,4 +27,11 @@ class _GetAppState extends State<GetApp> {
       ),
     );
   }
+}
+
+
+class CounterController extends GetxController {
+  var count = 0.obs;
+
+  void increment() => count++;
 }
